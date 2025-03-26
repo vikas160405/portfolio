@@ -91,13 +91,48 @@ section {
                 url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
 }
 
+/* Replace existing #hero h2 with this */
 #hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary);
-    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+    border-right: 0.15em solid var(--primary);
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite,
+        fadeIn 1s ease-in-out; /* Added fade-in */
+}
+/* Typewriter styles */
+#typewriter-name, #typewriter-subtitle {
+    position: relative;
+    display: inline-block;
 }
 
+/* Blinking cursor effect */
+#typewriter-name::after, #typewriter-subtitle::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    animation: blink 0.7s infinite;
+    color: var(--primary);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Subtitle specific styling */
+#typewriter-subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--light);
+}
+
+/* Keep existing #hero p */
 #hero p {
     font-size: 1.5rem;
     max-width: 800px;
@@ -140,12 +175,12 @@ h2::after {
     border-radius: 10px;
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(173, 27, 27, 0.1);
 }
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(81, 6, 211, 0.2);
 }
 
 .project img {
@@ -180,7 +215,7 @@ h2::after {
     padding: 1.5rem;
     border-radius: 8px;
     transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(5, 121, 238, 0.1);
     display: flex;
     flex-direction: column;
 }
@@ -198,7 +233,7 @@ h2::after {
 .cert-card p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: #ccc;
+    color: #0bb5e8;
 }
 
 .cert-card img {
@@ -214,9 +249,9 @@ h2::after {
 .cert-card img {
     max-height: 200px;
     object-fit: contain;
-    background: white;
+    background: rgb(131, 78, 236);
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #08c754;
 }
 
 .project img {
@@ -335,3 +370,4 @@ footer p {
         font-size: 2rem;
     }
 }
+
