@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Relangi | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00adb5;
+            --secondary: #393e46;
+            --dark: #121212;
+            --light: #eeeeee;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--secondary);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            color: var(--primary);
+            margin-bottom: 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+        }
+        
+        #hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .certs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .cert-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .project:hover, .cert-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .cert-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: white;
+            padding: 1rem;
+        }
+        
+        .project-content, .cert-content {
+            padding: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            color: var(--light);
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+        
+        .contact-links a:hover {
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            #hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vikas Relangi</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certs">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h2>Hi, I'm Vikas Relangi</h2>
+        <p>AI & Data Science Enthusiast | Cloud Computing | Software Developer</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a B.Tech student specializing in Artificial Intelligence and Data Science with hands-on experience in Python, Java, and machine learning frameworks. Passionate about developing innovative solutions to real-world problems.
+        </p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="images/security-password-generator.jpg.png" alt="Password Generator">
+                <div class="project-content">
+                    <h3>Secured Password Generator</h3>
+                    <p>Developed a secure password generation tool using advanced encryption techniques.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/aws.jpg.png" alt="AWS Projects">
+                <div class="project-content">
+                    <h3>AWS Cloud Projects</h3>
+                    <p>Developed and deployed applications using AWS services like EC2 and S3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certs">
+        <h2>Certifications</h2>
+        <div class="certs-container">
+            <div class="cert-card">
+                <img src="images/aws-cloud.png.png" alt="AWS Certification">
+                <div class="cert-content">
+                    <h3>AWS Cloud Computing</h3>
+                    <p>Andhra Pradesh State Skill Development Corporation</p>
+                    <p>Aug 2024</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <img src="images/cyber_security.png.png" alt="Cyber Security Certification">
+                <div class="cert-content">
+                    <h3>Cyber Security</h3>
+                    <p>APSCHE & Blackbuck Engineers</p>
+                    <p>Jul 2024</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <img src="images/python_certficate.png.png" alt="Python Certification">
+                <div class="cert-content">
+                    <h3>Python Programming</h3>
+                    <p>Internshala Trainings</p>
+                    <p>Jan 2025</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <img src="images/eda.png.png" alt="EDA Certification">
+                <div class="cert-content">
+                    <h3>Exploratory Data Analysis</h3>
+                    <p>IBM via Coursera</p>
+                    <p>Mar 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+            <a href="mailto:relangivikas2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/vikas-relangi-360ba1249" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/vikas160405" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/Vikas_relangi" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+918790676013"><i class="fas fa-phone"></i></a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Vikas Relangi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

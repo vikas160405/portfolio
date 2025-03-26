@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Relangi - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00adb5;
+            --secondary: #393e46;
+            --dark: #121212;
+            --light: #eeeeee;
+            --resume-bg: #f9f9f9;
+            --resume-text: #333333;
+            --resume-header: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--secondary);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .back-btn {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-btn:hover {
+            background-color: #008b8b;
+        }
+
+        .resume-container {
+            padding: 6rem 2rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .resume {
+            background-color: var(--resume-bg);
+            color: var(--resume-text);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .resume-header h1 {
+            color: var(--resume-header);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .subsection {
+            margin-bottom: 1rem;
+        }
+
+        .subsection-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+
+        .subsection-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .subsection-date {
+            color: #666;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 0.5rem;
+            color: var(--resume-header);
+        }
+
+        .skill-list {
+            list-style-type: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        footer {
+            background-color: var(--secondary);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            
+            .resume-container {
+                padding: 5rem 1rem 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .subsection-header {
+                flex-direction: column;
+            }
+            
+            .subsection-date {
+                margin-top: 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vikas Relangi - Resume</h1>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </header>
+    
+    <div class="resume-container">
+        <div class="resume">
+            <div class="resume-header">
+                <h1>VIKAS RELANGI</h1>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>relangivikas2005@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>8790676013</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Profile Summary</h2>
+                <p>Aspiring AI & Software Developer with a strong foundation in programming and a keen interest in Artificial Intelligence and Data Science. Skilled in C, Python, and Java, with experience in AI tools like Pandas, NumPy, and Matplotlib. Currently pursuing a B.Tech in Artificial Intelligence and Data Science at Bonam Venkata Chalamayya Engineering College. Passionate about problem-solving, teamwork, and innovation. Seeking opportunities to apply my skills in real-world projects and expand my expertise in software development.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="subsection">
+                    <div class="subsection-header">
+                        <div class="subsection-title">Bachelor of Technology (B.Tech) in Artificial Intelligence and Data Science</div>
+                    </div>
+                    <p>Bonam Venkata Chalamayya Engineering College</p>
+                    <p>Expected Graduation: 2026</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <ul class="skill-list">
+                            <li>C</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & Data Science</h4>
+                        <ul class="skill-list">
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Machine Learning</h4>
+                        <ul class="skill-list">
+                            <li>Basics of CNN</li>
+                            <li>Data Preprocessing</li>
+                            <li>Model Evaluation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Other Skills</h4>
+                        <ul class="skill-list">
+                            <li>Data Analysis & Visualization</li>
+                            <li>Basics of AWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="subsection">
+                    <div class="subsection-header">
+                        <div class="subsection-title">Eye Disease Detection using CNN</div>
+                    </div>
+                    <p>Developed a model to detect eye diseases and suggest treatments using Convolutional Neural Networks (CNN) with visualization techniques.</p>
+                </div>
+                <div class="subsection">
+                    <div class="subsection-header">
+                        <div class="subsection-title">Secured Password Generator</div>
+                    </div>
+                    <p>Designed a secure password generator tool to enhance cybersecurity measures.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Achievements & Awards</h2>
+                <ul class="skill-list">
+                    <li>Certified in Exploratory Data Analysis for Machine Learning</li>
+                    <li>Designed and Presented a Journal Paper</li>
+                    <li>Certified in Amazon Web Services</li>
+                    <li>Certified in Cybersecurity</li>
+                    <li>Excelled in Academics and Technical Skills Development</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Soft Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <ul class="skill-list">
+                            <li>Problem-Solving & Critical Thinking</li>
+                            <li>Collaboration & Teamwork</li>
+                            <li>Leadership & Decision Making</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <ul class="skill-list">
+                            <li>Effective Communication</li>
+                            <li>Creativity & Innovation</li>
+                            <li>Detail-Oriented Approach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Career Goals</h2>
+                <p>I aspire to become a versatile software developer with expertise in AI, data science, and cloud computing. My goal is to work on challenging, real-world projects, expand my skills in multiple programming languages and emerging technologies, and contribute to innovative solutions in the industry.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Declaration</h2>
+                <p>I hereby declare that all the information provided above is true to the best of my knowledge.</p>
+                <div style="margin-top: 2rem;">
+                    <p>Date: <span id="current-date"></span></p>
+                    <p>Place: Andhra Pradesh</p>
+                    <p style="margin-top: 1rem;">Signature: Vikas Relangi</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="download-btn" id="print-btn">
+                    <i class="fas fa-print"></i> Print Resume
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> Vikas Relangi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set current date and year
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Print functionality
+        document.getElementById('print-btn').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>
