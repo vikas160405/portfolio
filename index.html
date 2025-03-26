@@ -187,8 +187,32 @@
     </header>
     
     <section id="hero">
-        <h2>Hi, I'm Vikas Relangi</h2>
-        <p>AI & Data Science Enthusiast | Cloud Computing | Software Developer</p>
+        <h2 id="typewriter-name"></h2>
+        <p id="typewriter-subtitle"></p>
+        
+        <script>
+            // Typewriter configuration
+            const texts = [
+                { id: "typewriter-name", text: "Hi, I'm Vikas Relangi", speed: 100 },
+                { id: "typewriter-subtitle", text: "AI & Data Science Enthusiast | Cloud Computing | Software Developer", speed: 50, delay: 2500 }
+            ];
+    
+            texts.forEach((item) => {
+                const element = document.getElementById(item.id);
+                let charIndex = 0;
+                const delay = item.delay || 0;
+    
+                function type() {
+                    if (charIndex < item.text.length) {
+                        element.textContent += item.text.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, item.speed);
+                    }
+                }
+    
+                setTimeout(type, delay);
+            });
+        </script>
     </section>
     
     <section id="about">
@@ -264,7 +288,7 @@
             <a href="mailto:relangivikas2005@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://linkedin.com/in/vikas-relangi-360ba1249" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/vikas160405" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://instagram.com/relangi_vikas" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/Vikas_relangi" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="tel:+918790676013"><i class="fas fa-phone"></i></a>
         </div>
     </section>
