@@ -1,9 +1,9 @@
 /* styles.css */
 :root {
-    --primary: #00adb5;
-    --secondary: #393e46;
-    --dark: #121212;
-    --light: #eeeeee;
+    --primary: #18c0c9;
+    --secondary: #0a0218;
+    --dark: #161517;
+    --light: #ede6eb;
     --transition: all 0.3s ease-in-out;
 }
 
@@ -28,7 +28,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgb(9, 9, 9);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +87,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    background: linear-gradient(rgba(146, 158, 153, 0.795), rgba(0, 0, 0, 0)), 
                 url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
 }
 
@@ -175,12 +175,12 @@ h2::after {
     border-radius: 10px;
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(173, 27, 27, 0.1);
+    box-shadow: 0 5px 15px rgb(27, 7, 246);
 }
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(81, 6, 211, 0.2);
+    box-shadow: 0 15px 30px rgb(73, 255, 1);
 }
 
 .project img {
@@ -215,14 +215,14 @@ h2::after {
     padding: 1.5rem;
     border-radius: 8px;
     transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(5, 121, 238, 0.1);
+    box-shadow: 0 5px 15px rgb(3, 98, 241);
     display: flex;
     flex-direction: column;
 }
 
 .cert-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgb(3, 255, 11);
 }
 
 .cert-card h3 {
@@ -233,7 +233,7 @@ h2::after {
 .cert-card p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: #0bb5e8;
+    color: #b6c0f5;
 }
 
 .cert-card img {
@@ -241,7 +241,7 @@ h2::after {
     height: auto;
     margin: 1rem 0;
     border-radius: 5px;
-    border: 1px solid #444;
+    border: 1px solid #155da6;
     flex-grow: 1;
     object-fit: contain;
 }
@@ -249,9 +249,9 @@ h2::after {
 .cert-card img {
     max-height: 200px;
     object-fit: contain;
-    background: rgb(131, 78, 236);
+    background: rgb(186, 178, 235);
     padding: 10px;
-    border: 1px solid #08c754;
+    border: 1px solid #1e0f33;
 }
 
 .project img {
@@ -307,7 +307,7 @@ footer {
 
 footer p {
     font-size: 0.9rem;
-    color: #aaa;
+    color: #d5e808;
 }
 
 /* Animations */
@@ -355,6 +355,7 @@ footer p {
     }
 }
 
+/* Responsive Design */
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
@@ -371,3 +372,14 @@ footer p {
     }
 }
 
+/* Footer container to align items in one line */
+#footer-container {
+    display: flex;  /* Aligns text & button in one row */
+    justify-content: center;  /* Centers content */
+    align-items: center;  /* Aligns vertically */
+    gap: 20px;  /* Space between text and button */
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    color: rgb(117, 249, 231);
+    flex-wrap: wrap;  /* Makes it responsive */
+}
