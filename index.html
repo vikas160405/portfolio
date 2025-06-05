@@ -209,6 +209,56 @@
             }
         }
     </style>
+
+    <!-- Add inside <header> -->
+<button id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+
+<style>
+    #theme-toggle {
+        background: transparent;
+        border: none;
+        color: var(--light);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+</style>
+
+<script>
+    const themeToggle = document.getElementById("theme-toggle");
+    let isDark = true;
+
+    themeToggle.onclick = () => {
+        document.body.classList.toggle("light-theme");
+        isDark = !isDark;
+        themeToggle.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    };
+</script>
+
+<style>
+    .light-theme {
+        --primary: #0077b6;
+        --secondary: #90e0ef;
+        --dark: #f0f0f0;
+        --light: #111;
+        background-color: var(--dark);
+        color: var(--light);
+    }
+
+    .light-theme header,
+    .light-theme footer {
+        background-color: var(--secondary);
+    }
+
+    .light-theme nav a {
+        color: var(--light);
+    }
+
+    .light-theme nav a:hover {
+        color: var(--primary);
+    }
+</style>
+
 </head>
 <body>
     <header>
